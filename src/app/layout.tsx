@@ -1,0 +1,55 @@
+import type { Metadata } from 'next';
+import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+});
+
+export const metadata: Metadata = {
+  title: 'Neha Choudhary | Software Developer',
+  description:
+    'Senior Software Engineer with 7+ years of experience building scalable Java applications, Guidewire insurance solutions, and full-stack web applications.',
+  keywords: [
+    'Neha Choudhary',
+    'Software Developer',
+    'Java Developer',
+    'Full Stack Developer',
+    'Spring Boot',
+    'React',
+    'Noida',
+  ],
+  authors: [{ name: 'Neha Choudhary' }],
+  openGraph: {
+    title: 'Neha Choudhary | Software Developer & Guidewire Developer',
+    description:
+      'Portfolio of Neha Choudhary — Java, Spring Boot, Guidewire, React Developer based in Noida, India.',
+    type: 'website',
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
+    >
+      <body>{children}</body>
+    </html>
+  );
+}
