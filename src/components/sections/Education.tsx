@@ -63,10 +63,6 @@ export default function Education() {
               >
                 {education.degree}
               </p>
-              <p className="text-sm mb-3" style={{ color: '#a0a0b8' }}>
-                {education.fullName}
-              </p>
-
               <div className="flex flex-wrap gap-5 justify-center sm:justify-start">
                 <span
                   className="text-sm flex items-center gap-1.5"
